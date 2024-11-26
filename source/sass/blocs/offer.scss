@@ -1,0 +1,16 @@
+.offer {
+  padding: 20px;
+  background-image: url("../../img/offer-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-primary-500;
+}
+
+.catalog-additional__desk {
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-white;
+}

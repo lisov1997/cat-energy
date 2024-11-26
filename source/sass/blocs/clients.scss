@@ -1,0 +1,32 @@
+.clients {
+  padding: 20px;
+}
+
+.clients__client-desk {
+  color: $color-gray-700;
+}
+
+.clients__title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  color: $color-gray-700;
+}
+
+.clients__definition {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  color: $color-black;
+}
+
+.clients__cost {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-black;
+}

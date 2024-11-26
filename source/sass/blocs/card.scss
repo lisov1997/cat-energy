@@ -1,0 +1,27 @@
+.card__link {
+  color: $color-gray-850;
+  text-decoration: none;
+}
+
+.card__card-title {
+  font-family: $font-heading;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.card__card-info-list {
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-gray-700;
+}
+
+.card__card-order-button {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $color-white;
+  background-color: $color-primary-500;
+}

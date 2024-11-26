@@ -1,0 +1,16 @@
+.contacts {
+  padding: 20px;
+}
+
+.contacts__contacts-title {
+  font-family: $font-heading;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-gray-900;
+}
+
+.contacts__address-desk {
+  line-height: 20px;
+  color: $color-gray-700;
+}

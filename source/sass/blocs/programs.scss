@@ -1,0 +1,34 @@
+.programs {
+  padding: 20px;
+}
+
+.programs__list {
+  list-style-type: none;
+}
+
+.programs__item {
+  background-color: $color-gray-50;
+}
+
+.programs__item-title {
+  font-family: $font-heading;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.programs__item-desc {
+  color: $color-gray-700;
+}
+
+.programs__item-link {
+  display: block;
+  padding: 4px 47px 4px 0;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-black;
+}
