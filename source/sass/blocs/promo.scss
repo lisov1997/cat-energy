@@ -1,8 +1,11 @@
 .promo {
   padding: 20px;
-  background-image: url("../../img/promo-background.png");
+  color: $color-white;
+  background-color: $color-primary-500;
+  background-image: url("../../img/promo-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
 }
 
 .promo__title {
@@ -10,22 +13,14 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 1;
-  text-align: center;
-  color: $color-white;
 }
 
 .promo__desk {
   font-family: $font-heading;
-  font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
-  color: $color-white;
 }
 
 .promo__button {
   padding: 26px 14px;
-  font-size: 20px;
-  line-height: 0;
-  color: $color-white;
-  background-color: $color-primary-500;
 }

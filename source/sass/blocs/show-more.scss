@@ -1,24 +1,19 @@
 .show-more__title {
   font-family: $font-heading;
   font-size: 16px;
-  line-height: 125%;
+  line-height: 20px;
   text-transform: uppercase;
-  text-align: center;
   color: $color-gray-900;
 }
 
 .show-more__text {
   font-size: 12px;
   line-height: 16px;
-  text-align: center;
   color: $color-gray-700;
 }
 
 .show-more__button {
   padding: 10px;
   font-size: 16px;
-  font-weight: 400;
   line-height: 20px;
-  color: $color-gray-700;
-  background-color: $color-gray-250;
 }
