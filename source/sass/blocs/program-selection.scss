@@ -2,8 +2,30 @@
   padding: 20px;
 }
 
+.program-selection__form {
+  @media (min-width: $breakpoint-large) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
 .program-selection__form-group {
   margin: 0;
+}
+
+.program-selection__form-group--contacts,
+.program-selection__form-group--coment,
+.program-selection__form-group--additional {
+  @media (min-width: $breakpoint-large) {
+    grid-column: 1 / -1;
+  }
+}
+
+.form-footer {
+  @media (min-width: $breakpoint-large) {
+    grid-column: 1 / -1;
+  }
 }
 
 .program-selection__button {

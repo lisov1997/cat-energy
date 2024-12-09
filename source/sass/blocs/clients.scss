@@ -3,19 +3,27 @@
   background-color: $color-gray-100;
 }
 
-.clients__client-desk {
-  color: $color-gray-700;
+.clients__container {
+  @media (min-width: $breakpoint-large) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
 }
 
 .clients__list {
   text-align: center;
 }
 
+.clients__client-desk {
+  color: $color-gray-700;
+}
+
 .clients__title {
+  color: $color-gray-700;
   font-weight: 400;
   font-size: 12px;
   line-height: 1;
-  color: $color-gray-700;
 }
 
 .clients__definition {

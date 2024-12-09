@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи: Подбор программы</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -13,17 +14,17 @@
 
     <nav class="page-header__main-nav">
 
-      <a class="page-header__logo logo" href="#">
-        <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
-        <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="19" alt="Cat Energy" aria-hidden="true">
-      </a>
+      <div class="page-header__bar">
 
+        <a class="page-header__logo logo" href="#">
+          <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
+          <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="19" alt="Cat Energy" aria-hidden="true">
+        </a>
 
-
-      <button class="page-header__main-nav-toggler" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-
+        <button class="page-header__main-nav-toggler" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
 
       <ul class="page-header__menu site-menu">
 
@@ -43,18 +44,21 @@
   </header>
 
   <main class="page__main page-main">
-    <h1 class="page-main__heading">
-      Подбор программы
-    </h1>
-    <p class="page-main__subheading">Заполните анкету, и мы подберем
-      программу питания для вашего кота</p>
+
+    <header class="page-main__header container">
+      <h1 class="page-main__heading">
+        Подбор программы
+      </h1>
+      <p class="page-main__subheading">Заполните анкету, и мы подберем
+        программу питания для вашего кота</p>
+    </header>
 
     <section class="page-main__section program-selection">
       <h2 class="visually-hidden">Форма анкеты</h2>
 
-      <form class="program-selection__form" action="https://echo.htmlacademy.ru/" method="post">
+      <form class="program-selection__form container" action="https://echo.htmlacademy.ru/" method="post">
 
-        <fieldset class="program-selection__form-group field-group">
+        <fieldset class="program-selection__form-group--data-cat program-selection__form-group field-group field-group">
 
           <legend class="visually-hidden">Данные кота</legend>
 
@@ -84,7 +88,8 @@
           </ul>
         </fieldset>
 
-        <fieldset class="program-selection__form-group field-group">
+        <fieldset
+          class="program-selection__form-group program-selection__form-group--target-program field-group field-group">
           <legend class="visually-hidden">Цель программы</legend>
 
           <ul class="field-group__list">
@@ -115,10 +120,10 @@
           </ul>
         </fieldset>
 
-        <fieldset class="program-selection__form-group field-group">
+        <fieldset class="program-selection__form-group program-selection__form-group--contacts field-group">
           <legend class="field-group__title">Контактные данные (владельца кота)</legend>
 
-          <ul class="field-group__list">
+          <ul class="field-group__list field-group__list--contacts">
 
             <li class="field-group__item">
 
@@ -140,7 +145,7 @@
           </ul>
         </fieldset>
 
-        <div class="program-selection__form-group field-group">
+        <div class="program-selection__form-group program-selection__form-group--coment field-group">
           <label class="field-group__title">Комментарий</label>
 
           <div class="field-group__field field">
@@ -149,10 +154,10 @@
           </div>
         </div>
 
-        <fieldset class="program-selection__form-group field-group">
+        <fieldset class="program-selection__form-group program-selection__form-group--additional field-group">
           <legend class="field-group__title">Дополнительно</legend>
 
-          <ul class="field-group__list">
+          <ul class="field-group__list field-group__list--additional">
 
             <li class="field-group__item">
               <label class="field-group__control control control--checkbox">
@@ -187,58 +192,71 @@
             </li>
           </ul>
         </fieldset>
+        <div class="program-selection__footer">
 
-        <button class="program-selection__button button" type="submit">отправить заявку</button>
+          <button class="program-selection__button button" type="submit">отправить заявку</button>
 
-        <p class="program-selection__form-required-desk">* — Обязательные поля</p>
+          <p class="program-selection__form-required-desk">* — Обязательные поля</p>
+        </div>
       </form>
     </section>
 
     <footer class="page-main__footer contacts">
-      <h2 class="visually-hidden">Наш адрес</h2>
-      <p class="contacts__contacts-title">приглашаем к сотрудничеству дилеров!</p>
-      <address class="contacts__address">
-        <p class="contacts__address-desk">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-      </address>
-      <img src="img/address-map-img.png" alt="Наш офис на карте: Конюшенная, д.19/8 Санкт-Петербург" width="320"
-        height="362">
+
+      <div class="contacts-container container">
+
+        <h2 class="visually-hidden">Наш адрес</h2>
+        <p class="contacts__contacts-title">приглашаем к сотрудничеству дилеров!</p>
+        <address class="contacts__address">
+          <p class="contacts__address-desk">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </address>
+        <img src="img/address-map-img.png" alt="Наш офис на карте: Конюшенная, д.19/8 Санкт-Петербург" width="320"
+          height="362">
+      </div>
     </footer>
   </main>
-
   <footer class="page__footer page-footer">
 
-    <a class="page-footer__logo logo" href="#">
-      <img class="page-footer__logo-image" src="./img/logo-sign.svg" alt="Логотип «Кэт энерджи»" width="128" height="24">
-    </a>
+    <div class="page-footer__container container">
 
-    <ul class="page-footer__socials-list">
-
-      <li class="page-footer__social-item">
-        <a class="page-footer__socials-link" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">Наш аккаунт во Вконтакте</span>
-          <img class="page-footer__social-icon" src="./img/socials-icon-vkontakte.svg" width="28" height="22" alt="Иконка вк">
-          </a>
-      </li>
-
-      <li class="page-footer__social-item">
-        <a class="page-footer__socials-link" href="#">
-          <span class="visually-hidden">Наш аккаунт в Инстаграм</span>
-          <img class="page-footer__social-icon" src="./img/socials-icon-instagram.svg" width="20" height="20" alt="Иконка Инстаграм">
-          </a>
-      </li>
-
-      <li class="page-footer__social-item">
-        <a class="page-footer__socials-link" href="#">
-          <span class="visually-hidden">Наш аккаунт в Фейсбук</span>
-          <img class="page-footer__social-icon" src="./img/socials-icon-facebook.svg" alt="Иконка файсбук">
-        </a>
-      </li>
-    </ul>
-
-    <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
-      <span class="developer__text"> HTML Academy</span>
-      <img class="developer__image" src="./img/copyright-icon.svg" alt="Логотип htmlacademy" width="27" height="34" aria-hidden="true">
+      <a class="page-footer__logo logo" href="#">
+        <img class="page-footer__logo-image" src="./img/logo-sign.svg" alt="Логотип «Кэт энерджи»" width="128"
+          height="24">
       </a>
+
+      <ul class="page-footer__socials-list">
+
+        <li class="page-footer__social-item">
+          <a class="page-footer__socials-link" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Наш аккаунт во Вконтакте</span>
+            <img class="page-footer__social-icon" src="./img/socials-icon-vkontakte.svg" width="28" height="22"
+              alt="Иконка вк">
+          </a>
+        </li>
+
+        <li class="page-footer__social-item">
+          <a class="page-footer__socials-link" href="#">
+            <span class="visually-hidden">Наш аккаунт в Инстаграм</span>
+            <img class="page-footer__social-icon" src="./img/socials-icon-instagram.svg" width="20" height="20"
+              alt="Иконка Инстаграм">
+          </a>
+        </li>
+
+        <li class="page-footer__social-item">
+          <a class="page-footer__socials-link" href="#">
+            <span class="visually-hidden">Наш аккаунт в Фейсбук</span>
+            <img class="page-footer__social-icon" src="./img/socials-icon-facebook.svg" alt="Иконка файсбук">
+          </a>
+        </li>
+      </ul>
+
+      <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="developer__text"> HTML Academy</span>
+        <img class="developer__image" src="./img/copyright-icon.svg" alt="Логотип htmlacademy" width="27" height="34"
+          aria-hidden="true">
+      </a>
+    </div>
   </footer>
 </body>
+
 </html>

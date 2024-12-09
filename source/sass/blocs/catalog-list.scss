@@ -1,3 +1,16 @@
 .catalog-list {
-  padding: 20px;
+  padding: 20px 0;
+}
+
+.catalog-list__container {
+  @media (min-width: $breakpoint-medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 63px 80px;
+  }
 }

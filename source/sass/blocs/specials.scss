@@ -3,6 +3,28 @@
 }
 
 .specials__list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   color: $color-gray-700;
+
+
+  @media (min-width: $breakpoint-medium) {
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-large) {
+    gap: 70px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.specials__item {
+  @media (max-width: $breakpoint-small-down) {
+    & + & {
+      margin-top: 20px;
+    }
+  }
 }

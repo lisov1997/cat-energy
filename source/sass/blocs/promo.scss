@@ -2,10 +2,25 @@
   padding: 20px;
   color: $color-white;
   background-color: $color-primary-500;
-  background-image: url("../../img/promo-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   text-align: center;
+
+  @media (max-width: $breakpoint-small-down) {
+    background-image: url("../../img/promo-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    color: $color-black;
+    background-color: transparent;
+    text-align: left;
+  }
+}
+
+.promo__container {
+  @media (min-width: $breakpoint-medium) {
+    padding-left: 90px;
+  }
 }
 
 .promo__title {

@@ -1,5 +1,12 @@
 .catalog-additional {
-  padding: 20px;
+  padding: 20px 0;
+}
+
+.catalog-additional__wrapper {
+  @media (min-width: $breakpoint-large) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .catalog-additional__title {
@@ -10,7 +17,13 @@
 }
 
 .catalog-additional__list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
+
+  @media (min-width: $breakpoint-large) {
+    width: 896px;
+  }
 }
 
 .catalog-additional__card-title {
@@ -31,4 +44,10 @@
   padding: 10px;
   font-size: 16px;
   line-height: 20px;
+}
+
+.catalog-additional__promo {
+  @media (min-width: $breakpoint-large) {
+    width: 245px;
+  }
 }
