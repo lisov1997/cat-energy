@@ -12,11 +12,11 @@
 
   <header class="page__header page-header">
 
-    <nav class="page-header__main-nav">
+    <nav class="page-header__nav page-header__main-nav">
 
       <div class="page-header__bar">
 
-        <a class="page-header__logo logo" href="#">
+        <a class="page-header__logo logo logo__link" href="#">
           <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
           <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="19" alt="Cat Energy" aria-hidden="true">
         </a>
@@ -32,11 +32,11 @@
           <a class="site-menu__link" href="./index.html">главная</a>
         </li>
 
-        <li class="site-menu__item site-menu__item--active">
+        <li class="site-menu__item">
           <a class="site-menu__link" href="./catalog.html">каталог продукции</a>
         </li>
 
-        <li class="site-menu__item">
+        <li class="site-menu__item site-menu__item--active">
           <a class="site-menu__link">подбор программы</a>
         </li>
       </ul>
@@ -257,6 +257,22 @@
       </a>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.page-header__main-nav');
+    var navToggler = document.querySelector('.page-header__main-nav-toggler');
+
+    navMain.classList.add('page-header__main-nav--closed');
+
+    navToggler.addEventListener('click', function () {
+      if (navMain.classList.contains('page-header__main-nav--closed')) {
+        navMain.classList.remove('page-header__main-nav--closed');
+        navMain.classList.add('page-header__main-nav--opened');
+      } else {
+        navMain.classList.add('page-header__main-nav--closed');
+        navMain.classList.remove('page-header__main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

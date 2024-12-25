@@ -11,11 +11,11 @@
 <body class="page__body">
 
   <header class="page__header page-header">
-    <nav class="page-header__main-nav">
+    <nav class="page-header__nav page-header__main-nav">
 
       <div class="page-header__bar">
 
-        <a class="page-header__logo logo" href="#">
+        <a class="page-header__logo logo logo__link" href="#">
 
           <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
 
@@ -26,7 +26,7 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </div>
-      <ul class="page-header__menu site-menu">
+      <ul class="page-header__menu site-menu site-menu--main">
         <li class="site-menu__item site-menu__item--active">
           <a class="site-menu__link">главная</a>
         </li>
@@ -59,14 +59,14 @@
 
         <ul class="programs__list">
           <li class="programs__item">
-            <h3 class="programs__item-title">Похудение</h3>
+            <h3 class="programs__item-title programs__item-title--slim">Похудение</h3>
             <p class="programs__item-desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
               Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="programs__item-link" href="#">каталог slim</a>
           </li>
 
           <li class="programs__item">
-            <h3 class="programs__item-title">Набор массы</h3>
+            <h3 class="programs__item-title programs__item-title--pro">Набор массы</h3>
             <p class="programs__item-desc">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
               поможет вашему коту нарастить необходимые мышцы!</p>
             <a class="programs__item-link" href="#">каталог pro</a>
@@ -79,18 +79,20 @@
       <div class="specials__container container">
         <h2 class="page-main__heading">Как это работает</h2>
         <ol class="specials__list">
-          <li class="specials__item specials__item-benefit">
+          <li class="specials__item specials__item--benefit">
             <p class="specials__item-desk">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
-          <li class="specials__item specials__item-usability">
-            <p class="specials__item-desk">Выпускается в виде порошка,который нужно лишь залить кипятком и готово.</p>
+          <li class="specials__item specials__item--usability">
+            <p class="specials__item-desk">
+              Выпускается в виде порошка,который нужно лишь залить кипятком и готово.
+            </p>
           </li>
 
-          <li class="specials__item specials__item-instead">
+          <li class="specials__item specials__item--instead">
             <p class="specials__item-desk">Замените один-два приема обычной еды на наше функциональное питание..</p>
           </li>
 
-          <li class="specials__item specials__item-change">
+          <li class="specials__item specials__item--change">
             <p class="specials__item-desk">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
           </li>
         </ol>
@@ -187,6 +189,23 @@
       </a>
     </div>
   </footer>
+  <script>
+    var navMain = document.querySelector('.page-header__main-nav');
+    var navToggler = document.querySelector('.page-header__main-nav-toggler');
+
+    navMain.classList.add('page-header__main-nav--closed');
+
+    navToggler.addEventListener('click', function () {
+      if (navMain.classList.contains('page-header__main-nav--closed')) {
+        navMain.classList.remove('page-header__main-nav--closed');
+        navMain.classList.add('page-header__main-nav--opened');
+      } else {
+        navMain.classList.add('page-header__main-nav--closed');
+        navMain.classList.remove('page-header__main-nav--opened');
+      }
+    });
+  </script>
 </body>
+
 
 </html>

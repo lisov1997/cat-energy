@@ -1,3 +1,13 @@
+.programs {
+  @media (max-width: $breakpoint-small-down) {
+    padding-top: 20px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    padding-top: 82px;
+  }
+}
+
 .programs__list {
   display: grid;
   margin: 0;
@@ -19,29 +29,199 @@
 }
 
 .programs__item {
-  padding: 20px;
+  position: relative;
+  padding: 24px 20px 20px 20px;
   background-color: $color-gray-50;
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 77px 316px 53px 52px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    padding: 77px 51px 55px 52px;
+  }
 }
 
 .programs__item-title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 29px;
+  padding-left: 68px;
   font-family: $font-heading;
   font-size: 24px;
   font-weight: 400;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: $breakpoint-medium) {
+    position: static;
+    font-size: 36px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    position: relative;
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+
+    width: 50px;
+    height: 50px;
+    background-color: $color-primary-500;
+    border-radius: 50%;
+
+    @media (min-width: $breakpoint-medium) {
+      top: 92px;
+      left: 446px;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      top: -30px;
+      left: 0;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &::after {
+    background-size: contain;
+  }
+}
+
+.programs__item-title--slim {
+  &::after {
+    top: -3px;
+    left: 7px;
+    width: 36px;
+    height: 50px;
+    background-image: url("../img/icons/cat-slim.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $breakpoint-medium) {
+      top: 81px;
+      left: 476px;
+      width: 140px;
+      height: 194px;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      top: -36px;
+      left: 15px;
+      width: 70px;
+      height: 97px;
+    }
+  }
+}
+
+.programs__item-title--pro {
+  &::after {
+    top: 11px;
+    left: -10px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/icons/cat-pro.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $breakpoint-medium) {
+      top: 135px;
+      left: 410px;
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (min-width: $breakpoint-large) {
+      top: -10px;
+      left: -19px;
+      width: 134px;
+      height: 56px;
+    }
+  }
 }
 
 .programs__item-desc {
+  margin: 0;
+  margin-bottom: 15px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid $color-gray-200;
   color: $color-gray-700;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-bottom: 48px;
+    padding-bottom: 0;
+    border-bottom: none;
+
+  }
+
+  @media (min-width: $breakpoint-large) {
+    margin-bottom: 23px;
+    padding-bottom: 0;
+  }
 }
 
 .programs__item-link {
-  display: block;
-  padding: 4px 47px 4px 0;
+  display: grid;
+  grid-template-columns: max-content 32px;
+  gap: 17px;
+  align-items: center;
   font-family: $font-heading;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1;
+  line-height: 24px;
   text-transform: uppercase;
+  text-decoration: none;
   color: $color-black;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 20px;
+    line-height: 38px;
+    gap: 25px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    gap: 28px;
+  }
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 10px;
+    background-image: url("../img/icons/arrow-icon.svg");
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    &::after {
+      width: 32px;
+    }
+  }
+
+  &:focus {
+    opacity: 0.8;
+
+    &::after {
+      width: 32px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      width: 32px;
+    }
+  }
 }

@@ -1,0 +1,29 @@
+.logo  {
+  &:not(.logo--footer) {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__link:hover {
+    opacity: 0.8;
+  }
+
+  &__link:active {
+    opacity: 0.6;
+  }
+
+  &__link:focus {
+    opacity: 0.8;
+    outline: 2px solid $color-black;
+  }
+
+  img {
+    display: block;
+  }
+
+  .logo__sign {
+    justify-self: center;
+  }
+}

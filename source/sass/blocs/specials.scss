@@ -1,5 +1,10 @@
 .specials {
   padding: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 45px 30px 47px 30px;
+  }
 }
 
 .specials__list {
@@ -22,9 +27,43 @@
 }
 
 .specials__item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 20px;
+
   @media (max-width: $breakpoint-small-down) {
     & + & {
       margin-top: 20px;
     }
   }
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+
+    background-color: $color-primary-500;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.specials__item--benefit::before {
+  background-image: url("../img/icons/benefit-icon.svg");
+}
+
+.specials__item--usability::before {
+  background-image: url("../img/icons/usability-icon.svg");
+}
+
+.specials__item--instead::before {
+  background-image: url("../img/icons/instead-icon.svg");
+}
+
+.specials__item--change::before {
+  background-image: url("../img/icons/change-icon.svg");
+}
+
+.specials__item-desk {
+  margin: 0;
 }

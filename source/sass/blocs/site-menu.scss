@@ -1,8 +1,11 @@
 .site-menu {
+  margin: 0;
+  padding: 0;
   font-family: $font-heading;
   line-height: 1;
   text-transform: uppercase;
   list-style-type: none;
+  background-color: $color-white;
 
   @media (max-width: $breakpoint-small-down) {
     font-size: 20px;
@@ -14,10 +17,68 @@
     display: flex;
     justify-content: flex-end;
     font-size: 18px;
+    background-color: transparent;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 20px;
+  }
+}
+
+
+.site-menu__item {
+  @media (max-width: $breakpoint-small-down) {
+    border-bottom: 1px solid $color-gray-100;
+  }
+}
+
+.site-menu__item--active {
+  @media (min-width: $breakpoint-medium) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 17px;
+      right: 17px;
+      height: 2px;
+      background-color: $color-primary-500;
+    }
+  }
+}
+
+.site-menu--main .site-menu__item--active {
+  &::after {
+    background-color: $color-white;
   }
 }
 
 .site-menu__link {
+  display: block;
+  padding: 23px 22px 22px;
   color: $color-black;
   text-decoration: none;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 17px;
+  }
+}
+
+.site-menu--main .site-menu__link {
+  @media (min-width: $breakpoint-large) {
+    color: $color-white;
+    // background-color: $color-primary-500;
+  }
 }
