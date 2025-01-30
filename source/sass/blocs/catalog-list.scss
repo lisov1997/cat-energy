@@ -1,5 +1,9 @@
 .catalog-list {
   padding: 20px 0;
+
+  @media (max-width: $breakpoint-small-down) {
+    border-bottom: 1px solid $color-gray-100;
+  }
 }
 
 .catalog-list__container {
@@ -12,5 +16,29 @@
   @media (min-width: $breakpoint-large) {
     grid-template-columns: repeat(4, 1fr);
     gap: 63px 80px;
+  }
+}
+
+.catalog-list__item {
+  @media (max-width: $breakpoint-small-down) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: calc(50% - 50vw);
+
+      width: 100vw;
+      height: 1px;
+
+      background-color: $color-gray-100;
+    }
+  }
+}
+
+.catalog-list__item--show-more {
+  @media (min-width: $breakpoint-medium) {
+    margin-top: 80px;
   }
 }

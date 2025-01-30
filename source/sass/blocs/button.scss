@@ -16,9 +16,39 @@
     padding: 14px 26px;
     line-height: 1;
   }
+
+  &:hover {
+    background-color: $color-primary-700;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+    background-color: $color-primary-700;
+  }
+}
+
+.button--large {
+  font-size: 16px;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 20px;
+  }
 }
 
 .button--secondary {
   color: $color-gray-700;
   background-color: $color-gray-50;
+
+  &:hover {
+    background-color: $color-gray-100;
+  }
+
+  &:active {
+    color: rgba($color-gray-700, 0.3);
+    background-color: $color-gray-100;
+  }
+}
+
+.button--fixed {
+  font-size: 16px;
 }

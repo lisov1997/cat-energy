@@ -3,23 +3,25 @@
 // }
 
 .page-header__nav {
-  @media (min-width: $breakpoint-medium) {
-      display: grid;
-      grid-template-columns: 174px 1fr;
-      gap: 16px;
-      width: 708px;
-      // width: 93%;
-      // padding-left: 30px;
-      // padding-right: 30px;
-      margin: 0 auto;
-      padding: 24px 0;
+  @media (max-width: $breakpoint-small-down) {
+    &:not(.page-header__main-nav--index) {
+      border-bottom: 1px solid $color-gray-150;
     }
+  }
 
-    @media (min-width: $breakpoint-large) {
-      width: 1220px;
-      // width: 94%;
-      margin: 0 auto;
-    }
+  @media (min-width: $breakpoint-medium) {
+    display: grid;
+    grid-template-columns: 174px 1fr;
+    gap: 16px;
+    width: 708px;
+    margin: 0 auto;
+    padding: 24px 0;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 
@@ -70,13 +72,13 @@
   }
 
   @media (max-width: $breakpoint-small-down) {
-    .page-header__main-nav--closed &{
+    .page-header__main-nav--closed & {
       display: block;
     }
   }
 
   @media (max-width: $breakpoint-small-down) {
-    .page-header__main-nav--opened &{
+    .page-header__main-nav--opened & {
       display: block;
       background-image: url("..//img/icons/toggler-closed.svg");
     }
@@ -87,25 +89,23 @@
   }
 }
 
-  .page-header__menu {
-    margin: 0;
-    padding: 0;
+.page-header__menu {
+  margin: 0;
+  padding: 0;
 
-    @media (max-width: $breakpoint-small-down) {
-      .page-header__main-nav--closed & {
-        display: none;
-      }
+  @media (max-width: $breakpoint-small-down) {
+    .page-header__main-nav--closed & {
+      display: none;
     }
+  }
 
-    @media (max-width: $breakpoint-small-down) {
-      .page-header__main-nav--opened & {
-        display: block;
-        position: absolute;
-        z-index: 2;
-        left: 0;
-        right: 0;
-      }
+  @media (max-width: $breakpoint-small-down) {
+    .page-header__main-nav--opened & {
+      display: block;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      right: 0;
     }
+  }
 }
-
-

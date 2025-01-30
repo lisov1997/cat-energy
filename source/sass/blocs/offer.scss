@@ -1,18 +1,32 @@
 .offer {
-  padding: 20px;
+  padding: 186px 60px 43px;
   background-color: $color-primary-500;
-  background-image: url("../../img/offer-background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto, cover;
+  background-position: 50% 58px, 50% 50%;
+  background-image:
+    url("../img/icons/offer-icon.svg"),
+    url("../img/offer-background.jpg");
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   color: $color-white;
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 70px 120px 70px 422px;
+    background-position: 77px 50%, 50% 50%;
+
+    text-align: left;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    padding: 178px 40px 48px;
+    background-position: 50% 50px, 50% 50%;
+
+    text-align: center;
+  }
 }
 
-// .catalog-additional__desk {
-//   font-family: $font-heading;
-//   font-weight: 400;
-
-
-// }
+.offer__desk {
+  margin: 0;
+}

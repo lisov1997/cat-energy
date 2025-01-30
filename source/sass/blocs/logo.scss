@@ -1,4 +1,4 @@
-.logo  {
+.logo {
   &:not(.logo--footer) {
     display: grid;
     grid-template-columns: 34px 1fr;
@@ -25,5 +25,15 @@
 
   .logo__sign {
     justify-self: center;
+  }
+}
+
+.logo--footer {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $breakpoint-small-down) {
+    padding: 8px;
+    justify-content: center;
   }
 }
