@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи: Функциональное питание для котов</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicon/180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -16,8 +20,11 @@
       <div class="page-header__bar">
 
         <a class="page-header__logo logo logo__link" href="#">
-
-          <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="./img/logo-image-large.svg">
+            <source media="(min-width: 768px)" srcset="./img/logo-image-medium.svg">
+            <img class="logo__image" src="./img/logo-image-small.svg" width="34" height="38" alt="Cat Energy">
+          </picture>
 
           <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="19" alt="Cat Energy" aria-hidden="true">
         </a>
@@ -47,8 +54,12 @@
       <div class="promo__container container">
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__desk">Занялся собой? Займись котом!</p>
-        <img class="promo__image" src="./img/promo-image.png" alt="Промо корма «Кэт энерджи» со вкусом курицы"
-          width="280" height="270">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="./img/promo-image-large.png 1x, img/promo-image-large@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="./img/promo-image-medium.jpg 1x, img/promo-image-medium@2x.jpg 2x">
+          <img class="promo__image" src="./img/promo-image-small.png" srcset="./img/promo-image-small@2x.png 2x"
+            alt="Промо корма «Кэт энерджи» со вкусом курицы" width="280" height="270">
+        </picture>
         <a class="promo__button button" href="./form.html">подобрать программу</a>
       </div>
     </header>
@@ -129,10 +140,19 @@
 
           <div class="clients__images">
             <div class="clients__image clients__image--before clients__image--active">
-              <img src="./img/before-mobile.png" width="280" height="232" alt="Кот до рациона Cat Energy">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/cat-fat-medium.png 1x, img/cat-fat-medium@2x.png 2x">
+                <img src="./img/cat-fat-small.png" srcset="./img/cat-fat-small@2x.png 2x" width="280" height="232"
+                  alt="Кот до рациона Cat Energy">
+              </picture>
             </div>
             <div class="clients__image clients__image--before">
-              <img src="./img/after-mobile.png" width="280" height="232" alt="Кот после рациона Cat Energy">
+              <picture>
+                <source media="(min-width: 768px)"
+                  srcset="./img/cat-skinny-medium.png 1x, img/cat-skinny-medium@2x.png 2x">
+                <img src="./img/cat-skinny-small.png" srcset="./img/cat-skinny-small@2x.png 2x" width="280" height="232"
+                  alt="Кот после рациона Cat Energy">
+              </picture>
             </div>
           </div>
 

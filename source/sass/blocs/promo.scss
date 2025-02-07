@@ -5,8 +5,13 @@
   text-align: center;
 
   @media (max-width: $breakpoint-small-down) {
-    background-image: url("../img/background/promo-background.jpg"), linear-gradient($color-primary-500 0, $color-white 302px);
+    background-image: url("../img/background/promo-background-small.jpg"), linear-gradient($color-primary-500 0, $color-white 302px);
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/promo-background-small@2x.jpg"), linear-gradient($color-primary-500 0, $color-white 302px);
+      background-size: auto 302px, auto;
+    }
   }
 
   @media (min-width: $breakpoint-medium) {
@@ -30,6 +35,11 @@
       background-position: 0 100%;
       background-image: url("../img/background/promo-background-large.jpg");
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/promo-background-large@2x.jpg");
+        background-size: auto 696px;
+      }
     }
   }
 }

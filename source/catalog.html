@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи: Каталог продукции</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./img/favicon/32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicon/180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -16,7 +20,11 @@
 
       <div class="page-header__bar">
         <a class="page-header__logo logo logo__link" href="#">
-          <img class="logo__image" src="./img/logo-image.svg" width="34" height="38" alt="Cat Energy">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="./img/logo-image-large.svg">
+            <source media="(min-width: 768px)" srcset="./img/logo-image-medium.svg">
+            <img class="logo__image" src="./img/logo-image-small.svg" width="34" height="38" alt="Cat Energy">
+          </picture>
           <img class="logo__sign" src="./img/logo-sign.svg" width="101" height="19" alt="Cat Energy" aria-hidden="true">
         </a>
 
@@ -62,9 +70,15 @@
             <h3 class="card__title">Cat Energy PRO 500 г
             </h3>
           </a>
-
-          <img class="card__image" src="img/catalog-card-image-1.jpg" alt="Cat Energy PRO 500 г со вкусом курицы">
-
+          <picture class="card__picture">
+            <source media="(min-width: 1300px)"
+              srcset="./img/catalog/catalog-card-image-1-large.png 1x, img/catalog/catalog-card-image-1-large@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog/catalog-card-image-1-medium.png 1x, img/catalog/catalog-card-image-1-medium@2x.png 2x">
+            <img class="card__image" src="./img/catalog/catalog-card-image-1-small.jpg"
+              srcset="./img/catalog/catalog-card-image-1-small@2x.jpg 2x" alt="Cat Energy PRO 500 г со вкусом курицы"
+              aria-hidden="true">
+          </picture>
           <dl class="card__info-list">
 
             <dt class="card__content-index">Масса</dt>
@@ -87,9 +101,14 @@
             <h3 class="card__title">Cat Energy PRO 1000 г
             </h3>
           </a>
-
-          <img class="card__image" src="img/catalog-card-image-2.jpg" alt="Cat Energy PRO 1000 г со вкусом курицы">
-
+          <picture class="card__picture">
+            <source media="(min-width: 1300px)"
+              srcset="./img/catalog/catalog-card-image-2-large.png 1x, img/catalog/catalog-card-image-2-large@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog/catalog-card-image-2-medium.png 1x, img/catalog/catalog-card-image-2-medium@2x.png 2x">
+            <img class="card__image" src="./img/catalog/catalog-card-image-2-small.jpg"
+              srcset="./img/catalog/catalog-card-image-2-small@2x.jpg 2x" alt="Cat Energy PRO 1000 г со вкусом курицы">
+          </picture>
           <dl class="card__info-list">
             <dt class="card__content-index">Масса</dt>
             <dd class="card__content-value">1000 г</dd>
@@ -111,9 +130,14 @@
             <h3 class="card__title">Cat Energy PRO 500 г
             </h3>
           </a>
-
-          <img class="card__image" src="img/catalog-card-image-3.jpg" alt="Cat Energy PRO 500 г со вкусом рыбы">
-
+          <picture class="card__picture">
+            <source media="(min-width: 1300px)"
+              srcset="./img/catalog/catalog-card-image-3-large.png 1x, img/catalog/catalog-card-image-3-large@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog/catalog-card-image-3-medium.png 1x, img/catalog/catalog-card-image-3-medium@2x.png 2x">
+            <img class="card__image" src="./img/catalog/catalog-card-image-3-small.jpg"
+              srcset="./img/catalog/catalog-card-image-3-small@2x.jpg 2x" alt="Cat Energy PRO 500 г со вкусом рыбы">
+          </picture>
           <dl class="card__info-list">
             <dt class="card__content-index">Масса</dt>
             <dd class="card__content-value">500 г</dd>
@@ -134,9 +158,14 @@
             <h3 class="card__title">Cat Energy PRO 1000 г
             </h3>
           </a>
-
-          <img class="card__image" src="img/catalog-card-image-4.jpg" alt="Cat Energy PRO 1000 г со вкусом рыбы">
-
+          <picture class="card__picture">
+            <source media="(min-width: 1300px)"
+              srcset="./img/catalog/catalog-card-image-4-large.png 1x, img/catalog/catalog-card-image-4-large@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog/catalog-card-image-4-medium.png 1x, img/catalog/catalog-card-image-4-medium@2x.png 2x">
+            <img class="card__image" src="./img/catalog/catalog-card-image-4-small.jpg"
+              srcset="./img/catalog/catalog-card-image-4-small@2x.jpg 2x" alt="Cat Energy PRO 1000 г со вкусом рыбы">
+          </picture>
           <dl class="card__info-list">
 
             <dt class="card__content-index">Масса</dt>
@@ -158,9 +187,14 @@
             <h3 class="card__title">Cat Energy PRO 500 г
             </h3>
           </a>
-
-          <img class="card__image" src="img/catalog-card-image-5.jpg" alt="Cat Energy PRO 500 г со вкусом гречки">
-
+          <picture class="card__picture">
+            <source media="(min-width: 1300px)"
+              srcset="./img/catalog/catalog-card-image-5-large.png 1x, img/catalog/catalog-card-image-5-large@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog/catalog-card-image-5-medium.png 1x, img/catalog/catalog-card-image-5-medium@2x.png 2x">
+            <img class="card__image" src="./img/catalog/catalog-card-image-5-small.jpg"
+              srcset="./img/catalog/catalog-card-image-5-small@2x.jpg 2x" alt="Cat Energy PRO 500 г со вкусом гречки">
+          </picture>
           <dl class="card__info-list">
 
             <dt class="card__content-index">Масса</dt>
@@ -182,9 +216,14 @@
             <h3 class="card__title">Cat Energy PRO 1000 г
             </h3>
           </a>
-
-          <img class="card__image" src="img/catalog-card-image-6.jpg" alt="Cat Energy PRO 1000 г со вкусом гречки">
-
+          <picture class="card__picture">
+            <source media="(min-width: 1300px)"
+              srcset="./img/catalog/catalog-card-image-6-large.png 1x, img/catalog/catalog-card-image-6-large@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog/catalog-card-image-6-medium.png 1x, img/catalog/catalog-card-image-6-medium@2x.png 2x">
+            <img class="card__image" src="./img/catalog/catalog-card-image-6-small.jpg"
+              srcset="./img/catalog/catalog-card-image-6-small@2x.jpg 2x" alt="Cat Energy PRO 1000 г со вкусом гречки">
+          </picture>
           <dl class="card__info-list">
 
             <dt class="card__content-index">Масса</dt>
@@ -206,9 +245,14 @@
             <h3 class="card__title">Cat Energy PRO 500 г
             </h3>
           </a>
-
-          <img class="card__image" src="img/catalog-card-image-7.jpg" alt="Cat Energy PRO 500 г со вкусом риса">
-
+          <picture class="card__picture">
+            <source media="(min-width: 1300px)"
+              srcset="./img/catalog/catalog-card-image-7-large.png 1x, img/catalog/catalog-card-image-7-large@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/catalog/catalog-card-image-7-medium.png 1x, img/catalog/catalog-card-image-7-medium@2x.png 2x">
+            <img class="card__image" src="./img/catalog/catalog-card-image-7-small.jpg"
+              srcset="./img/catalog/catalog-card-image-7-small@2x.jpg 2x" alt="Cat Energy PRO 500 г со вкусом риса">
+          </picture>
           <dl class="card__info-list">
 
             <dt class="card__content-index">Масса</dt>
