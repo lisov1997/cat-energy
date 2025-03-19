@@ -1,0 +1,108 @@
+.card {
+  display: grid;
+  padding-top: 19px;
+  padding-bottom: 25px;
+
+  @media (max-width: $breakpoint-small-down) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img link"
+      "img list"
+      "button button";
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 8px 38px 40px;
+    grid-template-rows: 200px auto;
+    grid-template-areas:
+      "img"
+      "link"
+      "list"
+      "button";
+    background-color: $color-gray-50;
+    background-image: linear-gradient(to bottom, $color-white 80px, $color-gray-50 80px);
+  }
+}
+
+.card__link {
+  margin-bottom: 9px;
+  padding-right: 60px;
+  grid-area: link;
+  color: $color-gray-850;
+  text-decoration: none;
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    padding: 0 20px;
+  }
+}
+
+.card__title {
+  margin: 0;
+  text-align: center;
+  font-family: $font-heading;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+.card__picture,
+.card__image {
+  grid-area: img;
+  align-self: center;
+  justify-self: center;
+}
+
+.card__info-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2px;
+  grid-area: list;
+  margin-bottom: 13px;
+  padding: 9px 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-gray-700;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-bottom: 32px;
+    font-size: 16px;
+  }
+}
+
+.card__content-index {
+  margin: 0;
+  padding-right: 4px;
+
+  @media (min-width: $breakpoint-medium) {
+    padding-top: 2px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid $color-gray-250;
+  }
+}
+
+.card__content-value {
+  margin: 0;
+  padding-left: 4px;
+  text-align: right;
+
+  @media (min-width: $breakpoint-medium) {
+    padding-top: 2px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid $color-gray-250;
+  }
+}
+
+.card__order-button {
+  grid-area: button;
+}
