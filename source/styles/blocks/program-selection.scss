@@ -1,5 +1,9 @@
 .program-selection {
-  // overflow: hidden;
+  overflow: hidden;
+
+  @media (min-width: $breakpoint-medium) {
+    padding-top: 28px;
+  }
 
   @media (min-width: $breakpoint-large) {
     padding-top: 26px;
@@ -7,10 +11,17 @@
 }
 
 .program-selection__form {
+  @media (min-width: $breakpoint-medium) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
   @media (min-width: $breakpoint-large) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -29,6 +40,14 @@
         margin-top: 0;
       }
     }
+  }
+}
+
+.program-selection__form-group + .program-selection__form-group--additional {
+  margin-top: 22px;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-top: 64px;
   }
 }
 
@@ -57,7 +76,7 @@
   text-align: center;
 
   @media (min-width: $breakpoint-medium) {
-    margin-top: 54px;
+    margin-top: 51px;
     padding-bottom: 72px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -68,6 +87,9 @@
 
   @media (min-width: $breakpoint-large) {
     grid-column: 1 / -1;
+    margin-top: 59px;
+    padding-bottom: 82px;
+    gap: 80px;
   }
 }
 

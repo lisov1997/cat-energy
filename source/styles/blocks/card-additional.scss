@@ -1,18 +1,18 @@
 .card-additional {
-  padding: 13px 0 19px;
+  padding: 13px 0 18px;
 
   @media (min-width: $breakpoint-medium) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px 16px;
-    padding: 26px 38px 28px;
+    gap: 27px 16px;
+    padding: 25px 38px 28px;
   }
 
   @media (min-width: $breakpoint-large) {
-    align-items: center;
+    align-items: baseline;
     grid-template-columns: 1fr 80px 1fr 80px 1fr;
     column-gap: 0;
-    padding: 13px 0;
+    padding: 15px 0 18px;
   }
 }
 
@@ -44,6 +44,7 @@
   @media (min-width: $breakpoint-medium) {
     margin-bottom: 0;
     grid-template-columns: 1fr 82px;
+    align-items: end;
   }
 
   @media (min-width: $breakpoint-large) {
@@ -64,13 +65,16 @@
 
   @media (min-width: $breakpoint-large) {
     padding-right: 12px;
-
     text-align: left;
 
     &:last-child {
       text-align: left;
     }
   }
+}
+
+.card-additional__content-value--price {
+  text-transform: uppercase;
 }
 
 .card-additional__order-button {

@@ -7,6 +7,7 @@
 
     @media (min-width: $breakpoint-medium) {
       grid-template-columns: 61px 1fr;
+      gap: 11px;
     }
 
     @media (min-width: $breakpoint-large) {
@@ -14,15 +15,15 @@
     }
   }
 
-  &__link:hover {
+  &:hover {
     opacity: 0.8;
   }
 
-  &__link:active {
+  &:active {
     opacity: 0.6;
   }
 
-  &__link:focus {
+  &:focus {
     opacity: 0.8;
     outline: 2px solid $color-black;
   }
@@ -52,10 +53,16 @@
   @media (min-width: $breakpoint-large) {
     width: 71px;
   }
+
+  .logo--footer & {
+    width: 118px;
+  }
 }
 
 .logo__sign {
   width: 101px;
+  margin-top: 4px;
+  margin-right: 2px;
   justify-self: center;
 
   @media (min-width: $breakpoint-medium) {

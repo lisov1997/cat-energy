@@ -10,6 +10,8 @@
   <link rel="icon" href="./favicons/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./favicons/180.png">
   <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="preload" href="./fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -19,10 +21,10 @@
 
       <div class="page-header__bar">
 
-        <a class="page-header__logo logo logo__link" href="#">
+        <a class="page-header__logo logo" href="#">
           <picture>
-            <source media="(min-width: 1300px)" srcset="images/logo-image-large.svg">
-            <source media="(min-width: 768px)" srcset="images/logo-image-medium.svg">
+            <source media="(min-width: 1300px)" type="image/svg+xml" srcset="images/logo-image-large.svg"  width="71" height="59">
+            <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-image-medium.svg"  width="61" height="51">
             <img class="logo__image" src="images/logo-image-small.svg" width="34" height="38" alt="Cat Energy">
           </picture>
 
@@ -36,39 +38,39 @@
       </div>
       <ul class="page-header__menu site-menu site-menu--main">
         <li class="site-menu__item site-menu__item--active">
-          <a class="site-menu__link">главная</a>
+          <a class="site-menu__link" href="#">Главная</a>
         </li>
 
         <li class="site-menu__item">
-          <a class="site-menu__link" href="catalog.html">каталог продукции</a>
+          <a class="site-menu__link" href="catalog.html">Каталог продукции</a>
         </li>
 
         <li class="site-menu__item">
-          <a class="site-menu__link" href="form.html">подбор программы</a>
+          <a class="site-menu__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main class="page__main page-main">
-    <header class="page-main__header promo">
+    <header class="page-main__header page-main__header--index promo">
       <div class="promo__container container">
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__desk">Занялся собой? Займись котом!</p>
         <picture>
-          <source media=" (min-width: 1300px)" type="image/webp"
-            srcset="images/promo-image-large.webp 1x, images/promo-image-large@2x.webp 2x">
+          <source media="(min-width: 1300px)" type="image/webp"
+            srcset="images/promo-image-large@1x.webp 1x, images/promo-image-large@2x.webp 2x" width="552" height="499">
           <source media="(min-width: 768px)" type="image/webp"
-            srcset="images/promo-image-medium.webp 1x, images/promo-image-medium@2x.webp 2x">
-          <source type="image/webp" srcset="images/promo-image-large.webp 1x, images/promo-image-large@2x.webp 2x">
-          <source media=" (min-width: 1300px)"
-            srcset="images/promo-image-large.png 1x, images/promo-image-large@2x.png 2x">
-          <source media="(min-width: 768px)"
-            srcset="images/promo-image-medium.jpg 1x, images/promo-image-medium@2x.jpg 2x">
-          <img class="promo__image" src="images/promo-image-small.png" srcset="images/promo-image-small@2x.png 2x"
+            srcset="images/promo-image-medium@1x.webp 1x, images/promo-image-medium@2x.webp 2x" width="709" height="609">
+          <source type="image/webp" srcset="images/promo-image-large@1x.webp 1x, images/promo-image-large@2x.webp 2x" width="552" height="499">
+          <source media="(min-width: 1300px)" type="image/png"
+            srcset="images/promo-image-large@1x.png 1x, images/promo-image-large@2x.png 2x" width="552" height="499">
+          <source media="(min-width: 768px)" type="image/jpg"
+            srcset="images/promo-image-medium@1x.jpg 1x, images/promo-image-medium@2x.jpg 2x" width="709" height="609">
+          <img class="promo__image" src="images/promo-image-small@1x.png" srcset="images/promo-image-small@2x.png 2x"
             alt="Промо корма «Кэт энерджи» со вкусом курицы" width="280" height="270">
         </picture>
-        <a class="promo__button button" href="form.html">подобрать программу</a>
+        <a class="promo__button button button--promo" href="form.html">подобрать программу</a>
       </div>
     </header>
 
@@ -121,7 +123,7 @@
     <section class="page-main__section clients">
       <div class="clients__container container">
         <div class="clients__contents">
-          <h2 class="page-main__heading">Живой пример</h2>
+          <h2 class="page-main__heading clients__heading">Живой пример</h2>
           <p class="clients__client-desk">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
             Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
             по
@@ -149,22 +151,23 @@
           <div class="clients__images">
             <div class="clients__image clients__image--before clients__image--active">
               <picture>
-                <source media="(min-width: 768px)" type="imgae/webp"
-                  srcset="images/cat-fat-medium.webp 1x, images/cat-fat-medium@2x.webp 2x">
-                <source type="imgae/webp" srcset="images/cat-fat-small.webp 1x, images/cat-fat-small@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="images/cat-fat-medium.png 1x, images/cat-fat-medium@2x.png 2x">
+                <source media="(min-width: 768px)" type="image/webp"
+                  srcset="images/cat-fat-medium@1x.webp 1x, images/cat-fat-medium@2x.webp 2x" width="591" height="511">
+                <source type="image/webp" srcset="images/cat-fat-small@1x.webp 1x, images/cat-fat-small@2x.webp 2x" width="280" height="232">
+                <source media="(min-width: 768px)" type="image/png"
+                  srcset="images/cat-fat-medium@1x.png 1x, images/cat-fat-medium@2x.png 2x" width="591" height="511">
                 <img src="images/cat-fat-small.png" srcset="images/cat-fat-small@2x.png 2x" width="280" height="232"
                   alt="Кот до рациона Cat Energy">
               </picture>
             </div>
-            <div class="clients__image clients__image--before">
+            <div class="clients__image clients__image--after">
               <picture>
                 <source media="(min-width: 768px)" type="imgae/webp"
-                  srcset="images/cat-skinny-medium.webp 1x, images/cat-fat-medium@2x.webp 2x">
-                <source type="imgae/webp" srcset="images/cat-skinny-small.webp 1x, images/cat-skinny-small@2x.webp 2x">
-                <source media="(min-width: 768px)"
-                  srcset="images/cat-skinny-medium.png 1x, images/cat-skinny-medium@2x.png 2x">
+                  srcset="images/cat-skinny-medium@1x.webp 1x, images/cat-fat-medium@2x.webp 2x" width="599" height="511">
+                <source type="image/webp" srcset="images/cat-skinny-small@1x.webp 1x, images/cat-skinny-small@2x.webp 2x" width="280"
+                height="232">
+                <source media="(min-width: 768px)" type="image/png"
+                  srcset="images/cat-skinny-medium@1x.png 1x, images/cat-skinny-medium@2x.png 2x" width="599" height="511">
                 <img src="images/cat-skinny-small.png" srcset="images/cat-skinny-small@2x.png 2x" width="280"
                   height="232" alt="Кот после рациона Cat Energy">
               </picture>
@@ -172,9 +175,10 @@
           </div>
 
           <div class="clients__switcher switcher switcher--before">
+            <label class="visually-hidden" for="switcher-bar">Слайдер с примером влияния рациона Cat Energy</label>
             <button class="switcher__button" type="button">Было</button>
             <div class="switcher__toggler"></div>
-            <input class="switcher__bar" type="range" value="50" min="17" max="83">
+            <input class="switcher__bar" type="range" name="switcher-bar" id="switcher-bar" value="50" min="17" max="83">
             <button class="switcher__button" type="button">Стало</button>
           </div>
         </div>
@@ -191,17 +195,16 @@
           <span>Санкт-Петербург</span>
         </address>
       </div>
-      <!-- <img src="img/address-map-img.png" alt="Наш офис на карте: Конюшенная, д. 19/8 Санкт-Петербург" width="320"
-        height="362"> -->
-      <iframe class="contacts__map"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad224644410c55b2ed14431db75f96f5f9b20f7bae6f613c488ede772f53925b8&amp;source=constructor"></iframe>
+      <iframe class="contacts__map" title="Наш адрес"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad224644410c55b2ed14431db75f96f5f9b20f7bae6f613c488ede772f53925b8&amp;source=constructor" width="320"
+        height="362"></iframe>
     </footer>
   </main>
 
   <footer class="page__footer page-footer">
     <div class="page-footer__container container">
 
-      <a class="page-footer__logo logo logo__link logo--footer" href="#">
+      <a class="page-footer__logo logo logo--footer" href="#">
         <img class="page-footer__logo-image" src="images/logo-sign.svg" alt="Логотип «Кэт энерджи»" width="128"
           height="24">
       </a>
@@ -212,7 +215,7 @@
           <a class="social__link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Наш аккаунт во Вконтакте</span>
             <svg width="28" height="22" viewBox="0 0 28 22" focusable="false" aria-hidden="true">
-              <use xlink:href="icons/stack.svg#socials-icon-vk"></use>
+              <use href="icons/stack.svg#socials-icon-vk"></use>
             </svg>
           </a>
         </li>
@@ -221,7 +224,7 @@
           <a class="social__link" href="#">
             <span class="visually-hidden">Наш аккаунт в Инстаграм</span>
             <svg width="28" height="22" viewBox="0 0 28 22" focusable="false" aria-hidden="true">
-              <use xlink:href="icons/stack.svg#socials-icon-instagram"></use>
+              <use href="icons/stack.svg#socials-icon-instagram"></use>
             </svg>
           </a>
         </li>
@@ -230,7 +233,7 @@
           <a class="social__link social__link--facebook" href="#">
             <span class="visually-hidden">Наш аккаунт в Фейсбук</span>
             <svg width="28" height="22" viewBox="0 0 28 22" fill="none" focusable="false" aria-hidden="true">
-              <use xlink:href="icons/stack.svg#socials-icon-facebook"></use>
+              <use href="icons/stack.svg#socials-icon-facebook"></use>
             </svg>
           </a>
         </li>
@@ -239,7 +242,7 @@
       <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="visually-hidden">Разработано:</span>HTML Academy
         <svg class="developer__image" width="27" height="34" viewBox="0 0 27 34" focusable="false" aria-hidden="true">
-          <use xlink:href="icons/stack.svg#icon-developer"></use>
+          <use href="icons/stack.svg#icon-developer"></use>
         </svg>
       </a>
     </div>

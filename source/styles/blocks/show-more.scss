@@ -14,11 +14,16 @@
     background-image: url("../../images/catalog-show-more-icon-destop.svg");
     border: 1px solid $color-gray-50;
   }
+
+  @media (min-width: $breakpoint-large) {
+    padding-top: 158px;
+    padding-bottom: 43px;
+  }
 }
 
 .show-more__title {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 9px;
   font-family: $font-heading;
   font-size: 16px;
   line-height: 20px;
@@ -27,8 +32,13 @@
 
   @media (min-width: $breakpoint-medium) {
     margin-bottom: 23px;
+    padding: 0 40px;
     font-size: 20px;
     line-height: 22px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    padding: 0 10px;
   }
 }
 
@@ -40,11 +50,20 @@
   color: $color-gray-700;
 
   @media (min-width: $breakpoint-medium) {
+    padding: 0 20px;
     font-size: 16px;
     line-height: 18px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    padding: 0;
   }
 }
 
 .show-more__button {
   width: 100%;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-top: auto;
+  }
 }

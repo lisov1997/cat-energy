@@ -10,6 +10,8 @@
   <link rel="icon" href="./favicons/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./favicons/180.png">
   <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -20,10 +22,10 @@
 
       <div class="page-header__bar">
 
-        <a class="page-header__logo logo logo__link" href="index.html">
+        <a class="page-header__logo logo" href="index.html">
           <picture>
-            <source media="(min-width: 1300px)" srcset="images/logo-image-large.svg">
-            <source media="(min-width: 768px)" srcset="images/logo-image-medium.svg">
+            <source media="(min-width: 1300px)" type="image/svg+xml" srcset="images/logo-image-large.svg"  width="71" height="59">
+            <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-image-medium.svg"  width="61" height="51">
             <img class="logo__image" src="images/logo-image-small.svg" width="34" height="38" alt="Cat Energy">
           </picture>
           <img class="logo__sign" src="images/logo-sign.svg" width="101" height="19" alt="Cat Energy"
@@ -46,7 +48,7 @@
         </li>
 
         <li class="site-menu__item site-menu__item--active">
-          <a class="site-menu__link">подбор программы</a>
+          <a class="site-menu__link" href="#">подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -54,7 +56,7 @@
 
   <main class="page__main page-main">
 
-    <header class="page-main__header container">
+    <header class="page-main__header page-main__header--form container">
       <h1 class="page-main__heading">
         Подбор программы
       </h1>
@@ -68,7 +70,7 @@
 
       <form class="program-selection__form container" action="https://echo.htmlacademy.ru/" method="post">
 
-        <fieldset class="program-selection__form-group--data-cat program-selection__form-group field-group field-group">
+        <fieldset class="program-selection__form-group--data-cat program-selection__form-group field-group">
 
           <legend class="visually-hidden">Данные кота</legend>
 
@@ -77,21 +79,21 @@
             <li class="field-group__item">
               <label class="field-group__label field" for="cats-nickname">
                 <span class="field__title">ИМЯ:*</span>
-                <input class="field__input" type="text" id="cats-nickname" placeholder="барсик" required>
+                <input class="field__input" type="text" name="cats-nickname" id="cats-nickname" placeholder="барсик" required>
               </label>
             </li>
 
             <li class="field-group__item">
               <label class="field-group__label field" for="cats-weight">
                 <span class="field__title">Вес (кг):*</span>
-                <input class="field__input" type="text" id="cats-weight" placeholder="7" required>
+                <input class="field__input" type="text" name="cats-weight" id="cats-weight" placeholder="7" required>
               </label>
             </li>
 
             <li class="field-group__item">
               <label class="field-group__label field" for="cats-age">
                 <span class="field__title">Возраст (лет):</span>
-                <input class="field__input" type="text" id="cats-age" placeholder="7">
+                <input class="field__input" type="text" name="cats-weight" id="cats-age" placeholder="7">
               </label>
             </li>
           </ul>
@@ -141,7 +143,7 @@
                   placeholder="kuklachev@gmail.coml" required>
                 <svg class="field__icon" width="24" height="24" viewBox="0 0 24 24" focusable="false"
                   aria-hidden="true">
-                  <use xlink:href="icons/stack.svg#icon-email"></use>
+                  <use href="icons/stack.svg#icon-email"></use>
                 </svg>
               </label>
             </li>
@@ -154,7 +156,7 @@
                   placeholder="8 (960) 900-60-90" required>
                 <svg class="field__icon" width="24" height="24" viewBox="0 0 24 24" focusable="false"
                   aria-hidden="true">
-                  <use xlink:href="icons/stack.svg#icon-phone"></use>
+                  <use href="icons/stack.svg#icon-phone"></use>
                 </svg>
               </label>
             </li>
@@ -166,7 +168,7 @@
             <span>Комментарий</span></label>
 
           <div class="field-group__field field field--no-label">
-            <textarea class="field__input" name="comment-about-cats" id="comment-about-cats" rows="5"
+            <textarea class="field__input field__input--textarea" name="comment-about-cats" id="comment-about-cats" rows="5"
               placeholder="Расскажите обо всех повАдках кота"></textarea>
           </div>
         </div>
@@ -226,16 +228,15 @@
           <span>Санкт-Петербург</span>
         </address>
       </div>
-      <!-- <img src="img/address-map-img.png" alt="Наш офис на карте: Конюшенная, д. 19/8 Санкт-Петербург" width="320"
-        height="362"> -->
-      <iframe class="contacts__map"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad224644410c55b2ed14431db75f96f5f9b20f7bae6f613c488ede772f53925b8&amp;source=constructor"></iframe>
+      <iframe class="contacts__map" title="Наш адрес"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad224644410c55b2ed14431db75f96f5f9b20f7bae6f613c488ede772f53925b8&amp;source=constructor" width="320"
+        height="362"></iframe>
     </footer>
   </main>
   <footer class="page__footer page-footer">
     <div class="page-footer__container container">
 
-      <a class="page-footer__logo logo logo__link logo--footer" href="index.html">
+      <a class="page-footer__logo logo  logo--footer" href="index.html">
         <img class="page-footer__logo-image" src="images/logo-sign.svg" alt="Логотип «Кэт энерджи»" width="128"
           height="24">
       </a>
@@ -246,7 +247,7 @@
           <a class="social__link" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Наш аккаунт во Вконтакте</span>
             <svg width="28" height="22" viewBox="0 0 28 22" focusable="false" aria-hidden="true">
-              <use xlink:href="icons/stack.svg#socials-icon-vk"></use>
+              <use href="icons/stack.svg#socials-icon-vk"></use>
             </svg>
           </a>
         </li>
@@ -255,7 +256,7 @@
           <a class="social__link" href="#">
             <span class="visually-hidden">Наш аккаунт в Инстаграм</span>
             <svg width="28" height="22" viewBox="0 0 28 22" focusable="false" aria-hidden="true">
-              <use xlink:href="icons/stack.svg#socials-icon-instagram"></use>
+              <use href="icons/stack.svg#socials-icon-instagram"></use>
             </svg>
           </a>
         </li>
@@ -264,7 +265,7 @@
           <a class="social__link social__link--facebook" href="#">
             <span class="visually-hidden">Наш аккаунт в Фейсбук</span>
             <svg width="28" height="22" viewBox="0 0 28 22" fill="none" focusable="false" aria-hidden="true">
-              <use xlink:href="icons/stack.svg#socials-icon-facebook"></use>
+              <use href="icons/stack.svg#socials-icon-facebook"></use>
             </svg>
           </a>
         </li>
@@ -273,12 +274,12 @@
       <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="visually-hidden">Разработано:</span>HTML Academy
         <svg class="developer__image" width="27" height="34" viewBox="0 0 27 34" focusable="false" aria-hidden="true">
-          <use xlink:href="icons/stack.svg#icon-developer"></use>
+          <use href="icons/stack.svg#icon-developer"></use>
         </svg>
       </a>
     </div>
   </footer>
-  <script src="js/app.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 
 </html>

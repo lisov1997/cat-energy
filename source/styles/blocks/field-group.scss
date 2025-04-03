@@ -5,6 +5,7 @@
 
 .field-group--target {
   padding: 21px;
+  padding-bottom: 17px;
 
   @media (min-width: $breakpoint-medium) {
     padding: 25px;
@@ -39,6 +40,7 @@
   }
 
   @media (min-width: $breakpoint-medium) {
+    margin-bottom: 75px;
     font-size: 36px;
     line-height: 36px;
 
@@ -46,11 +48,19 @@
       margin-top: 22px;
     }
 
+    .field-group__list--additional & {
+      margin-bottom: 57px;
+    }
+
     span {
       width: auto;
       margin-left: -42px;
       padding: 0 42px;
     }
+  }
+
+  @media (min-width: $breakpoint-large) {
+    margin-bottom: 72px;
   }
 }
 
@@ -66,38 +76,11 @@
   list-style-type: none;
 }
 
-.field-group__item {
-  // display: flex;
-
-  & + & {
-    margin-top: 14px;
-
-    @media (min-width: $breakpoint-medium) {
-      margin-top: 20px;
-
-      .field-group__list--additional & {
-        margin-top: 0;
-      }
-
-      .field-group__list--target & {
-        margin-top: 13px;
-      }
-    }
-
-    @media (min-width: $breakpoint-large) {
-      .field-group__list--contacts & {
-        margin-top: 0;
-      }
-    }
-  }
-}
-
 .field-group__list--contacts {
   @media (min-width: $breakpoint-large) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    align-self: center;
   }
 }
 
@@ -105,11 +88,43 @@
   @media (min-width: $breakpoint-medium) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
-    row-gap: 32px;
+    gap: 32px 60px;
   }
 
   @media (min-width: $breakpoint-large) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.field-group__item {
+  & + & {
+    margin-top: 14px;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .field-group__item + .field-group__item {
+    margin-top: 20px;
+  }
+
+  .field-group__list--additional .field-group__item + .field-group__item {
+    margin-top: 0;
+  }
+
+  .field-group__list--target .field-group__item + .field-group__item {
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  .field-group__list--contacts .field-group__item + .field-group__item {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: $breakpoint-small-down) {
+  .field-group__list--additional .field-group__item + .field-group__item {
+    margin-top: 12px;
   }
 }

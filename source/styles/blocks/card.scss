@@ -1,4 +1,6 @@
 .card {
+  position: relative;
+  z-index: 0;
   display: grid;
   padding-top: 19px;
   padding-bottom: 25px;
@@ -6,8 +8,8 @@
   @media (max-width: $breakpoint-small-down) {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "img link"
-      "img list"
+      "img    link"
+      "img    list"
       "button button";
   }
 
@@ -31,18 +33,29 @@
   color: $color-gray-850;
   text-decoration: none;
 
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 80px;
+  }
+
   @media (min-width: $breakpoint-medium) {
+    margin-top: 33px;
+    margin-bottom: 6px;
     padding: 0 40px;
+
+    &::after {
+      bottom: 120px;
+    }
   }
 
   @media (min-width: $breakpoint-large) {
-    padding: 0 20px;
+    padding: 0;
   }
 }
 
 .card__title {
   margin: 0;
-  text-align: center;
   font-family: $font-heading;
   font-size: 16px;
   font-weight: 400;
@@ -58,9 +71,22 @@
 
 .card__picture,
 .card__image {
+  display: block;
   grid-area: img;
-  align-self: center;
-  justify-self: center;
+  place-self: center;
+  width: auto;
+}
+
+.card__image {
+  margin-bottom: 10px;
+
+  @media (min-width: $breakpoint-medium) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    margin-bottom: 15px;
+  }
 }
 
 .card__info-list {
@@ -68,6 +94,7 @@
   grid-template-columns: 1fr 1fr;
   row-gap: 2px;
   grid-area: list;
+  margin: 0;
   margin-bottom: 13px;
   padding: 9px 0;
   font-size: 12px;
@@ -75,8 +102,9 @@
   color: $color-gray-700;
 
   @media (min-width: $breakpoint-medium) {
-    margin-bottom: 32px;
+    margin-bottom: 25px;
     font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -103,6 +131,12 @@
   }
 }
 
+.card__content-value--price {
+  text-transform: uppercase;
+}
+
 .card__order-button {
+  position: relative;
+  z-index: 1;
   grid-area: button;
 }

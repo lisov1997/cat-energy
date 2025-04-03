@@ -2,7 +2,7 @@
   position: relative;
   z-index: 0;
 
-  padding: 25px 0 20px;
+  padding: 25px 0 35px;
 
   &::before {
     content: "";
@@ -26,7 +26,12 @@
   }
 
   @media (min-width: $breakpoint-large) {
+    padding-top: 74px;
     padding-bottom: 86px;
+
+    &::before {
+      top: 97px;
+    }
   }
 }
 
@@ -51,10 +56,11 @@
 
   @media (min-width: $breakpoint-medium) {
     margin: 0;
-    margin-bottom: 80px;
+    margin-bottom: 79px;
     padding: 0 36px;
 
     font-size: 36px;
+    line-height: 1;
   }
 
   @media (min-width: $breakpoint-large) {
@@ -73,7 +79,7 @@
   }
 
   @media (min-width: $breakpoint-medium) {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
     border: 1px solid $color-gray-250;
   }
 

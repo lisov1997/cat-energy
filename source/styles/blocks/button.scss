@@ -3,7 +3,6 @@
   padding: 11px 12px;
   font-family: $font-heading;
   font-size: 14px;
-  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -21,6 +20,11 @@
     background-color: $color-primary-700;
   }
 
+  &:focus {
+    color: rgba($color-white, 0.8);
+    background-color: $color-primary-700;
+  }
+
   &:active {
     color: rgba($color-white, 0.3);
     background-color: $color-primary-700;
@@ -29,9 +33,18 @@
 
 .button--large {
   font-size: 16px;
+  line-height: 1;
 
   @media (min-width: $breakpoint-medium) {
     font-size: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.button--promo {
+  @media (min-width: $breakpoint-medium) {
+    padding: 17px 26px;
   }
 }
 
@@ -43,6 +56,11 @@
     background-color: $color-gray-100;
   }
 
+  &:focus {
+    color: rgba($color-gray-700, 0.8);
+    background-color: $color-gray-100;
+  }
+
   &:active {
     color: rgba($color-gray-700, 0.3);
     background-color: $color-gray-100;
@@ -51,4 +69,8 @@
 
 .button--fixed {
   font-size: 16px;
+
+  @media (min-width: $breakpoint-medium) {
+    padding: 11px 12px;
+  }
 }

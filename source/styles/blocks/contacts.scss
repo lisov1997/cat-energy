@@ -28,7 +28,7 @@
 
   @media (min-width: $breakpoint-medium) {
     width: 708px;
-    padding: 56px 40px;
+    padding: 56px 40px 61px;
     grid-template-columns: 172px 172px;
     justify-content: space-between;
   }
@@ -46,6 +46,7 @@
 }
 
 .contacts__contacts-title {
+  margin: 0;
   padding-right: 10px;
   font-family: $font-heading;
   font-size: 16px;
@@ -54,8 +55,14 @@
   color: $color-gray-900;
 
   @media (min-width: $breakpoint-medium) {
+    margin-top: 4px;
+    padding-right: 0;
     font-size: 20px;
     line-height: 26px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    margin-top: 0;
   }
 }
 
@@ -68,7 +75,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    line-height: 20px;
     text-align: right;
   }
 }
@@ -85,9 +91,6 @@
 
   @media (min-width: $breakpoint-large) {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
   }
 }

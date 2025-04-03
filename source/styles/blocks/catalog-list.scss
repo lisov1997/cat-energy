@@ -1,8 +1,16 @@
 .catalog-list {
-  padding: 20px 0;
+  overflow: hidden;
 
   @media (max-width: $breakpoint-small-down) {
     border-bottom: 1px solid $color-gray-100;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    padding-top: 13px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    padding-top: 16px;
   }
 }
 
@@ -15,7 +23,7 @@
 
   @media (min-width: $breakpoint-large) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 63px 80px;
+    gap: 64px 80px;
   }
 }
 

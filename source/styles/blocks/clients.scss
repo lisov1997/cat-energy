@@ -1,34 +1,36 @@
 .clients {
-  padding: 25px 20px 40px 20px;
+  padding: 25px 0 43px;
   background-color: $color-gray-100;
 
   @media (min-width: $breakpoint-medium) {
     padding-top: 43px;
+    padding-bottom: 62px;
     border-top: 1px solid $color-gray-150;
     background-image: linear-gradient(to top, $color-gray-100 462px, $color-white 462px);
   }
 
   @media (min-width: $breakpoint-large) {
-    padding-bottom: 75px;
+    padding-top: 22px;
+    padding-bottom: 69px;
   }
 }
 
 .clients__container {
   @media (min-width: $breakpoint-large) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 590px;
     gap: 80px;
   }
 }
 
 .clients__contents {
-  margin-bottom: 40px;
+  margin-bottom: 29px;
 
   @media (min-width: $breakpoint-medium) {
     display: grid;
     grid-template-columns: 366px 1fr;
     column-gap: 32px;
-    margin-bottom: 80px;
+    margin-bottom: 85px;
   }
 
   @media (min-width: $breakpoint-large) {
@@ -37,7 +39,13 @@
   }
 }
 
-.example__heading {
+.clients__view {
+  @media (min-width: $breakpoint-large) {
+    margin-top: -43px;
+  }
+}
+
+.clients__heading {
   @media (min-width: $breakpoint-medium) {
     grid-column: 1 / -1;
   }
@@ -50,14 +58,16 @@
 
   @media (min-width: $breakpoint-medium) {
     grid-column: 1 / -1;
-    margin-top: 31px;
+    margin-top: 10px;
     margin-bottom: 54px;
+    padding-right: 8px;
   }
 
   @media (min-width: $breakpoint-large) {
     grid-column: 1 / -2;
-    margin-top: 146px;
+    margin-top: 92px;
     margin-bottom: 70px;
+    padding-right: 30px;
   }
 }
 
@@ -66,15 +76,16 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
   text-align: center;
 
   @media (min-width: $breakpoint-medium) {
     margin-bottom: 0;
+    gap: 42px;
   }
 
   @media (min-width: $breakpoint-large) {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     grid-column: 1 / 2;
     gap: 42px;
   }
@@ -88,17 +99,21 @@
   padding: 14px 8px 0;
   border: 1px solid $color-gray-250;
   border-radius: 4px;
+
+  @media (min-width: $breakpoint-medium) {
+    padding-top: 16px;
+  }
 }
 
 .clients__title {
   width: 87px;
-  padding: 0 4px;
   margin-bottom: -12px;
-  color: $color-gray-700;
+  padding: 0 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1;
   text-transform: lowercase;
+  color: $color-gray-700;
   background-color: $color-gray-100;
 
   @media (min-width: $breakpoint-medium) {
@@ -116,7 +131,7 @@
 
 .clients__definition {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 7px;
   font-family: $font-heading;
   font-weight: 400;
   font-size: 24px;
@@ -124,33 +139,33 @@
   color: $color-black;
 
   @media (min-width: $breakpoint-medium) {
+    margin-bottom: 16px;
     font-size: 30px;
-    margin-bottom: 14px;
   }
 }
 
 .clients__cost {
   margin: 0;
-  text-align: center;
   font-family: $font-heading;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
-  color: $color-black;
 
   @media (min-width: $breakpoint-medium) {
     padding-left: 50px;
     align-self: center;
     font-size: 20px;
+    line-height: 30px;
     text-align: right;
   }
 
   @media (min-width: $breakpoint-large) {
-    padding-left: 0;
-    grid-column: 1 / 2;
     display: grid;
+    grid-column: 1 / 2;
     grid-template-columns: 1fr 42px 1fr;
+    padding-left: 0;
 
     text-align: left;
 
@@ -170,6 +185,7 @@
   @media (min-width: $breakpoint-medium) {
     display: grid;
     grid-template-columns: 50% 1fr;
+    margin-bottom: 26px;
     padding: 0 58px;
     overflow: hidden;
   }
@@ -181,6 +197,10 @@
 
 .clients__image {
   display: none;
+
+  img {
+    margin-left: -14px;
+  }
 
   @media (min-width: $breakpoint-medium) {
     display: flex;
@@ -195,6 +215,14 @@
 }
 
 .clients__image--before {
+  @media (min-width: $breakpoint-medium) {
+    img {
+      margin-left: 0;
+    }
+  }
+}
+
+.clients__image--after {
   @media (min-width: $breakpoint-medium) {
     justify-content: end;
   }

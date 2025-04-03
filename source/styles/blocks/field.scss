@@ -12,6 +12,7 @@
   color: $color-gray-700;
 
   @media (min-width: $breakpoint-medium) {
+    gap: 18px;
     font-size: 20px;
   }
 }
@@ -20,9 +21,8 @@
   min-width: 100px;
   padding: 9px 14px;
   font-family: inherit;
-  flex-grow: 1;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 25px;
   text-transform: uppercase;
   color: $color-gray-850;
   border: 1px solid $color-gray-150;
@@ -55,12 +55,24 @@
 
   @media (min-width: $breakpoint-medium) {
     padding: 10px 18px;
-
     font-size: 20px;
+    line-height: 30px;
 
     .field--icon & {
       padding-right: 50px;
     }
+  }
+}
+
+.field__input-textarea {
+  padding-bottom: 18px;
+
+  @media (min-width: $breakpoint-medium) {
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    padding-bottom: 21px;
   }
 }
 
